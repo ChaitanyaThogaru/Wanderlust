@@ -1,8 +1,8 @@
 const express=require("express");
 const router=express.Router();
 const wrapAsync=require("../utils/wrapAsync.js");
-const Listing=require("C:/Users/chait/Downloads/Project/models/listing.js");
-const {isLoggedIn,isOwner,validateListing}=require("/Users/chait/Downloads/Project/middleware.js");
+const Listing=require("../models/listing.js");
+const {isLoggedIn,isOwner,validateListing}=require("../middleware.js");
 const flash=require("connect-flash");
 const listingcontroller= require("../controllers/listing.js");
 const multer = require("multer");

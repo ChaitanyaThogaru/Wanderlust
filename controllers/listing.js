@@ -5,7 +5,7 @@ const geocodingClient = mbxGeocoding({ accessToken: mapToken });
 //Index Route
 module.exports.index= async (req,res,next)=>{
    const allListings=await Listing.find({});
-   res.render("C:/Users/chait/Downloads/Project/views/listings/index.ejs",{allListings});
+   res.render("listings/index.ejs",{allListings});
 };
 
 module.exports.renderNewform=(req,res,next)=>{
