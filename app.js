@@ -68,9 +68,9 @@ const sessionOptions= {
 };
 
 
-// app.get("/",(req,res)=> {
-//     res.send("Hi,I am root");
-// });
+app.get("/",(req,res)=> {
+    res.redirect("/listings");
+});
 
 
 app.use(session(sessionOptions));
@@ -101,7 +101,7 @@ app.use((req,res,next)=>{
 app.use(express.urlencoded({extended:true}));
 app.use("/listings",listingRouter);
 app.use("/listings/:id/reviews",reviewRouter)
-app.use("/listings",userRouter);
+app.use("/",userRouter);
 
 
 app.all("*path",(req,res,next)=>{
