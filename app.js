@@ -101,7 +101,7 @@ app.use((req,res,next)=>{
 app.use(express.urlencoded({extended:true}));
 app.use("/listings",listingRouter);
 app.use("/listings/:id/reviews",reviewRouter)
-app.use("/",userRouter);
+app.use("/listings",userRouter);
 
 
 app.all("*path",(req,res,next)=>{
